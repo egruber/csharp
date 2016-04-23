@@ -19,7 +19,7 @@ namespace WindowsFormsTutorial
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hello C# Forms. I have wanted to use you for so long");
+            MessageBox.Show("Hello C# Forms. I have wanted to use you for so long","Hello",MessageBoxButtons.YesNo,MessageBoxIcon.Information);
         }
     }
 }
