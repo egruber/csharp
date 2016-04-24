@@ -22,5 +22,11 @@ namespace csharp_numbers
             int myInteger = 25;
             MessageBox.Show(myInteger.ToString());
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            float myFloat = 3.1F;
+            MessageBox.Show(myFloat.ToString());
+        }
     }
 }
