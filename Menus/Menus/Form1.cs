@@ -16,5 +16,9 @@ namespace Menus
         {
             InitializeComponent();
         }
-    }
+
+        private void viewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
 }
