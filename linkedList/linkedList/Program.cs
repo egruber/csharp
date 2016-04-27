@@ -43,7 +43,7 @@ namespace linkedList
             {
                 // Head hasn't been assigned, so assign it
                 head = node;
-
+                Console.WriteLine("Added first Node");
             }
             else
             {
@@ -69,8 +69,16 @@ namespace linkedList
             Console.WriteLine("Starting Linked List");
 
             LL list1 = new LL();
+            string data = "Apples";
+            
+            // Display an empty list
+            //list1.printFirstNode();
+
+            // Create the first add.
+            list1.Add(data);
             list1.printFirstNode();
 
+            list1.Add(data);
 
             // Add a ReadKey just to see the output of a successful run
             Console.ReadKey();
