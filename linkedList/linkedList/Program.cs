@@ -48,7 +48,7 @@ namespace linkedList
             else
             {
                 // Since it's not the first item, I need to add it to the end
-                node.next 
+                //node.next 
                 
             }
         }
