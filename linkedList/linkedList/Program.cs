@@ -12,7 +12,7 @@ namespace linkedList
         public Node next;
         public Object data;
     }
-    public class LinkedList
+    public class LL
     {
         private Node head;
         private int size;
@@ -20,7 +20,16 @@ namespace linkedList
         public void printFirstNode()
         {
             Node current = head;
-            Console.WriteLine(current.data);
+            // Verify that I actually have content present in the list
+            if (head != null)
+            {
+                Console.WriteLine(current.data);
+            }
+            else
+            {
+                Console.WriteLine("List is empty.");
+            }
+            
         }
         public void Add(Object incomingData)
         {
@@ -52,7 +61,8 @@ namespace linkedList
         {
             Console.WriteLine("Starting Linked List");
 
-            LinkedList list1 = new LinkedList();
+            LL list1 = new LL();
+            list1.printFirstNode();
 
         }
     }
