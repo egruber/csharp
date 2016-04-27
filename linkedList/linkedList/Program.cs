@@ -48,8 +48,15 @@ namespace linkedList
             else
             {
                 // Since it's not the first item, I need to add it to the end
-
+                node.next 
                 
+            }
+        }
+        public void printNodes(LL list)
+        {
+            for (int position = 0; position < list.size; position++)
+            {
+
             }
         }
     }
@@ -71,6 +78,7 @@ namespace linkedList
             list1.Add(data);
             list1.printFirstNode();
 
+            list1.Add(data);
 
             // Add a ReadKey just to see the output of a successful run
             Console.ReadKey();
