@@ -1,2 +1,2 @@
 # csharp
-Home and Learn tutorial
+A repository of my learning and experimenting with C\#
