@@ -31,13 +31,14 @@ namespace linkedList
             }
             
         }
-        public void Add(Object incomingData)
+        public void AddFront(Object incomingData)
         {
             // First, increase the size of the linked list
             size++;
 
             var node = new Node();
             node.data = incomingData;
+
             // Now, I'm going to check to see if this is the first item we are inserting
             if(head == null)
             {
@@ -47,16 +48,35 @@ namespace linkedList
             }
             else
             {
-                // Since it's not the first item, I need to add it to the end
-                node.next 
-                
+                // Set the next node to the head node's next item
+                node.next = head.next;
+                // Set the head's next to the current node
+                head.next = node;
             }
         }
-        public void printNodes(LL list)
+        public void Length()
         {
-            for (int position = 0; position < list.size; position++)
-            {
+            Console.WriteLine("The current length is: " + size);
+        }
 
+        public void printNodes()
+        {
+            // Start at the head
+            Node current_location = head;
+            
+            // If there isn't another node, just print this node and don't go into a loop.
+            if(current_location.next == null)
+            {
+                Console.WriteLine("Data: " + current_location.data);
+            }
+            else
+            {
+                // Cycle through nodes until the next node isn't null
+                while (current_location.next != null)
+                {
+                    Console.WriteLine("Data: " + current_location.data);
+                    current_location = current_location.next;
+                }
             }
         }
     }
@@ -70,15 +90,17 @@ namespace linkedList
 
             LL list1 = new LL();
             string data = "Apples";
-            
-            // Display an empty list
-            //list1.printFirstNode();
-
+         
             // Create the first add.
-            list1.Add(data);
-            list1.printFirstNode();
+            list1.AddFront(data);
 
-            list1.Add(data);
+            // Add second data element
+            data = "Pears";
+            list1.AddFront(data);
+
+            // Output the current size of the list
+            list1.Length();
+            list1.printNodes();
 
             // Add a ReadKey just to see the output of a successful run
             Console.ReadKey();
