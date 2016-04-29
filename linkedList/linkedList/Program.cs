@@ -44,7 +44,7 @@ namespace linkedList
             {
                 // Head hasn't been assigned, so assign it
                 head = node;
-                Console.WriteLine("Added first Node");
+                Console.WriteLine("Added first node with data: " + node.data);
             }
             else
             {
@@ -52,6 +52,7 @@ namespace linkedList
                 node.next = head.next;
                 // Set the head's next to the current node
                 head.next = node;
+                Console.WriteLine("Added new node with data: " + node.data);
             }
         }
         public void Length()
@@ -63,6 +64,7 @@ namespace linkedList
         {
             // Start at the head
             Node current_location = head;
+            int nodeCount = 0;
             
             // If there isn't another node, just print this node and don't go into a loop.
             if(current_location.next == null)
@@ -72,11 +74,14 @@ namespace linkedList
             else
             {
                 // Cycle through nodes until the next node isn't null
-                while (current_location.next != null)
+                while (current_location != null && nodeCount != size)
                 {
                     Console.WriteLine("Data: " + current_location.data);
                     current_location = current_location.next;
-                }
+
+                    // To ensure I'm not getting stuck in a loop, only proceed through the list up to the length 
+                    nodeCount++;
+                }                
             }
         }
     }
@@ -89,14 +94,15 @@ namespace linkedList
             Console.WriteLine("Starting Linked List");
 
             LL list1 = new LL();
-            string data = "Apples";
-         
+
+            // Check the length before anything is added
+            list1.Length();
+
             // Create the first add.
-            list1.AddFront(data);
+            list1.AddFront("Apples");
 
             // Add second data element
-            data = "Pears";
-            list1.AddFront(data);
+            list1.AddFront("Pears");
 
             // Output the current size of the list
             list1.Length();
