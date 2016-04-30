@@ -17,20 +17,7 @@ namespace linkedList
         private Node head;
         private int size;
 
-        public void printFirstNode()
-        {
-            Node current = head;
-            // Verify that I actually have content present in the list
-            if (head != null)
-            {
-                Console.WriteLine(current.data);
-            }
-            else
-            {
-                Console.WriteLine("List is empty.");
-            }
-            
-        }
+        // Accessors 
         public void AddFront(Object incomingData)
         {
             // First, increase the size of the linked list
@@ -80,12 +67,10 @@ namespace linkedList
                 {
                     if(currentLocation.next == null)
                     {
-                        Console.WriteLine("Current Location's Data: " + currentLocation.data);
                         currentLocation.next = node;
                     }
                     else
                     {
-                        Console.WriteLine("Current Location's Data: " + currentLocation.data);
                         currentLocation = currentLocation.next;
                     }
                 }
@@ -95,11 +80,12 @@ namespace linkedList
                 size++;
             }
         }
+        
+        // Informational Classes
         public void Length()
         {
             Console.WriteLine("The current length is: " + size);
         }
-
         public void printNodes()
         {
             // Start at the head
@@ -123,6 +109,20 @@ namespace linkedList
                     nodeCount++;
                 }                
             }
+        }
+        public void printFirstNode()
+        {
+            Node current = head;
+            // Verify that I actually have content present in the list
+            if (head != null)
+            {
+                Console.WriteLine(current.data);
+            }
+            else
+            {
+                Console.WriteLine("List is empty.");
+            }
+
         }
     }
 
