@@ -16,4 +16,4 @@ Some of the content you will see inside based on folder structure:
 6. csharpconsole
   * A Hello World to C\#.
 7. linkedList
-  * A linked List class that I'm currently developing. I realize that Collections has a linked list class already, but this is a basic practice for refreshing on data structures.
+  * A linked List class that I've created. I realize that Collections has a linked list class already, but this is a basic practice for refreshing on data structures. I also explain in it's local directory why it's important to me to keep it on display
